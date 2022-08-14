@@ -19,3 +19,8 @@ library(tidyverse)
 read_lines("murders.csv",n_max =3)
 dat <- read_csv(filename)
 dat <-read_csv(fullpath)
+
+#Importing Data Using R-base Functions
+filename <- "murders.csv"
+dat2 <-read.csv(filename)
+class(dat2)
