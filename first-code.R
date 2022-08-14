@@ -24,3 +24,16 @@ dat <-read_csv(fullpath)
 filename <- "murders.csv"
 dat2 <-read.csv(filename)
 class(dat2)
+
+#Downloading Files from the Internet
+
+url <- "https://raw.githubusercontent.com/rafalab/dslabs/master/inst/extdata/murders.csv"
+dat <- read_csv(url)
+#local copy of the file 
+download.file(url,"murders.csv")
+
+##creating temporary names 
+tmp_filename <-tempfile()
+download.file(url,tmp_filename)
+dat<-read_csv(tmp_filename)
+file.remove(tmp_filename)
