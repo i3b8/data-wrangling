@@ -14,3 +14,8 @@ fullpath
 file.copy(fullpath,getwd())
 file.exists((filename))
 
+##The readr and readxl Packages 
+library(tidyverse)
+read_lines("murders.csv",n_max =3)
+dat <- read_csv(filename)
+dat <-read_csv(fullpath)
