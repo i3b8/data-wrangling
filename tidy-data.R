@@ -29,3 +29,9 @@ new_tidy_data <- wide_data %>% pivot_longer(-country,names_to = "year", values_t
                                             names_transform = list(year=as.numeric))
 class(new_tidy_data$year)
 head(new_tidy_data)
+## plotting ##
+new_tidy_data %>% ggplot(aes(year,fertility,color=country))+
+  geom_point()
+
+
+##Reshaping data: pivot wider
