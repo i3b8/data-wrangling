@@ -1,0 +1,6 @@
+wide format : 
+each row includes several observations 
+one of the variables is sstored in the header 
+
+tidy format: 
+each row includes a unique observation 
