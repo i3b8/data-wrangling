@@ -4,3 +4,6 @@ one of the variables is sstored in the header
 
 tidy format: 
 each row includes a unique observation 
+
+pivot_longer funtion: 
+transform everything to characterss !! 
