@@ -35,3 +35,12 @@ new_tidy_data %>% ggplot(aes(year,fertility,color=country))+
 
 
 ##Reshaping data: pivot wider
+new_wide_data <-new_tidy_data %>% pivot_wider(names_from = year,
+                                              values_from = fertility)
+select(new_wide_data,country,'1960':'1967')
+##Select ## 
+path <- system.file("extdata",package = "dslabs")
+fname <- "life-expectancy-and-fertility-two-countries-example.csv"
+filename <-file.path(path,fname)
+raw_dat <- read_csv(filename)
+select(raw_dat,1:4)

@@ -41,4 +41,27 @@ file.remove(tmp_filename)
 
 
 ### Assessment ###
+library(tidyverse)
 url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data"
+download.file(url,"assessment")
+read_lines("assessment",n_max =3)
+## note it is not with header 
+## to read and inspect data
+dat <- read_csv("assessment",col_names = FALSE)
+
+
+##Seperate 
+# import data
+path <- system.file("extdata", package = "dslabs")
+fname <-  "life-expectancy-and-fertility-two-countries-example.csv"
+filename <- file.path(path, fname)
+
+raw_dat <- read_csv(filename)
+select(raw_dat, 1:4)
+
+# pivot all columns except country
+dat <- raw_dat %>% pivot_longer(-country)
+head(dat)
+dat$name[1:5]
+
+
